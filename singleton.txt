@@ -1,0 +1,32 @@
+This is a general outline for how to implement the singleton pattern when that time comes.
+
+//This is the classic singltone which should work in our project
+
+public class ClassicSingleton {
+	private static ClassicSingleton uniqueInstance;
+ 
+	private ClassicSingleton() {}
+ 
+	public static ClassicSingleton getInstance() {
+		if (uniqueInstance == null) {
+			uniqueInstance = new ClassicSingleton();
+		}
+		return uniqueInstance;
+	}
+ 
+	// other useful methods here
+	public String getDescription() {
+		return "I'm a ClassicSingleton!";
+	}
+}
+
+
+Once you guys have coded the concrete factory classes (USMint or what ever), instead of doing a 
+
+    Mint us = new US_Mint(); //for example
+    
+we would include the instanceOf() method:
+
+    Mint us = instanceOf(); //or something like this
+
+So when a factory is created it uses the same factory every time.
