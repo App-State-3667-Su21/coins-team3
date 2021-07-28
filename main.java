@@ -6,5 +6,9 @@ public class main{
         System.out.println(WashingtonDC.getName());
         System.out.println(WashingtonDC.getLocation());
         WashingtonDC.makeCoins();
+
+        Penny Pen = new Penny();
+        System.out.println(Pen.getVal());
+        System.out.println(Pen.getCode());
     }
 }
