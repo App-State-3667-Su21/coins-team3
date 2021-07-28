@@ -37,8 +37,8 @@ compile: Mint.java USAMint.java CanadaMint.java MintTest.java USAMintTest.java C
 	
 
 clean:
-	rm -f *~
-	rm -f Calculator*.class
+	rm -f *.class
+
 
 test: $(JUNIT5_JAR)
 	java -cp .:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path 
