@@ -30,9 +30,11 @@ default:
 #etc.
 #Essential that command lines start with single TAB character
 
-compile: Calculator.java CalculatorTest.java $(JUNIT5_JAR)
-	javac -cp .:$(JUNIT5_JAR) CalculatorTest.java
-	javac Calculator.java
+compile: Mint.java USAMint.java CanadaMint.java MintTest.java USAMintTest.java CanadaMintTest.java $(JUNIT5_JAR)
+	javac -cp .:$(JUNIT5_JAR) USAMintTest.java	
+	javac -cp .:$(JUNIT5_JAR) CanadaMintTest.java
+	javac -cp .:$(JUNIT5_JAR) MintTest.java
+	
 
 clean:
 	rm -f *~
