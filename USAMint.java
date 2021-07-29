@@ -16,8 +16,9 @@ public class USAMint extends Mint {
     public String getLocation() {
         return location;
     }
-
+    /**
     public void makeCoins() {
         System.out.println("This doesn't do much yet");
     }
+    */
 }
