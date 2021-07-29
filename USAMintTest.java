@@ -6,7 +6,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.io.PrintStream;
+import java.io.ByteArrayOutputStream;
+
 public class USAMintTest { 
+
+    Mint usMint;
+    PrintStream originalOut;
+    ByteArrayOutputStream baos;
+    PrintStream newOut;
 
 
     @BeforeEach
@@ -26,6 +34,6 @@ public class USAMintTest {
     public void usMint_makeCoins() {
 
         setUpOut();
-        mint.makeCoins();
+        usMint.makeCoins();
     }
 }

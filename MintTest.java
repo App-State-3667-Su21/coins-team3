@@ -12,18 +12,19 @@ public class MintTest {
     
     @BeforeEach
     public void init() {
-        mint = new Mint("USA", "Captial_Mint");
+        mint = new USAMint("USA", "Captial_Mint");
     }
+    
     @Test
     public void testMintLocation() {
 
-        String location = usMint.getLocation();
+        String location = mint.getLocation();
         assertEquals("USA", location);
     }
     @Test
     public void testMintName() {
 
-        String name = usMint.getName();
+        String name = mint.getName();
         assertEquals("Capital_Mint", name);
     }
 }
