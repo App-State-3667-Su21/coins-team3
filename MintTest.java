@@ -8,28 +8,22 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class MintTest {
 
-    private Mint usMint;
-    private Mint cadMint;
-    private String location;
-    private String name;
-
+    private Mint mint;
+    
     @BeforeEach
     public void init() {
-        usMint = new USMint();
+        mint = new Mint("USA", "Captial_Mint");
     }
     @Test
-    public void testEvaluate() {
-        //Calculator calculator = new Calculator();
-        int sum = calculator.evaluate("1+2+3");
-        assertEquals(6, sum);
-        }
-    @Test
-    public void testEvaluate2() {
-        //Calculator calculator2 = new Calculator();
-        String expression = new String("3 + 4 + 5");
-        //int sum2 = calculator2.evaluate(expression.replaceAll("\\s", ""));
-        int sum2 = calculator.evaluate(expression.replaceAll("\\s", ""));
-        assertEquals(12, sum2);
-    }
+    public void testMintLocation() {
 
+        String location = usMint.getLocation();
+        assertEquals("USA", location);
+    }
+    @Test
+    public void testMintName() {
+
+        String name = usMint.getName();
+        assertEquals("Capital_Mint", name);
+    }
 }
