@@ -17,7 +17,5 @@ public class CanadaMint extends Mint {
         return location;
     }
 
-    public void makeCoins() {
-        System.out.println("This doesn't do much yet");
-    }
+    
 }
