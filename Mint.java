@@ -17,7 +17,7 @@ public abstract class Mint {
     public abstract String getName();
 
     //Will be used to make coins... I think
-    public void makeCoins() {
+    public abstract void makeCoins(/**) {
         System.out.println("Possible coin factories include: USD, GBP, CAD, EUR");
         if(location.equals("USA")) 
         {
@@ -115,6 +115,6 @@ public abstract class Mint {
                 }
             }
        } 
-    }
+    }*/);
     
 }

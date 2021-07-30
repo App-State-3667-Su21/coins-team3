@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import java.util.Random;
 
+class dummyMint extends Mint{getLocation{return;} getName{return;}}
+
 public class MintTest {
     
     private Mint mint;

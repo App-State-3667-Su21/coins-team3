@@ -9,7 +9,7 @@ public class main{
         Montreal.makeCoins();
         */
        
-        USAMint Vermont = new USAMint("American Mint");
+        CanadaMint Vermont = new CanadaMint("American Mint");
         System.out.println(Vermont.getName());
         System.out.println(Vermont.getLocation());
         Vermont.makeCoins();
