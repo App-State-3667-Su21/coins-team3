@@ -19,7 +19,7 @@ public class USAMintTest {
     @BeforeEach
     public void init() {
         System.out.println("USMintTest");
-        usMint = new USAMint("USA", "Captial_Mint");
+        usMint = new USAMint("Captial_Mint");
     }
 
     

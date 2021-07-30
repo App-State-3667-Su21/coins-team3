@@ -1,11 +1,10 @@
 public class USAMint extends Mint {
     
-    private String location;
+    private String location = "USA";
     private String name;
 
-    public USAMint(String location, String name) {
-        super(location, name);
-        this.location = location;
+    public USAMint( String name) {
+        super("USA", name);
         this.name = name;
     }
 

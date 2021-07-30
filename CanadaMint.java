@@ -1,11 +1,10 @@
 public class CanadaMint extends Mint {
     
-    private String location;
+    private String location = "CAD";
     private String name;
 
-    public CanadaMint(String location, String name) {
-        super(location, name);
-        this.location = location;
+    public CanadaMint(String name) {
+        super("CAD", name);
         this.name = name;
     }
 

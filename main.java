@@ -3,13 +3,13 @@ public class main{
     public static void main(String args[]) {
 
         
-        /**CanadaMint Montreal = new CanadaMint("CAD", "Canadian Mint");
+        /**CanadaMint Montreal = new CanadaMint("Canadian Mint");
         System.out.println(Montreal.getName());
         System.out.println(Montreal.getLocation());
         Montreal.makeCoins();
         */
        
-        USAMint Vermont = new USAMint("USA", "American Mint");
+        USAMint Vermont = new USAMint("American Mint");
         System.out.println(Vermont.getName());
         System.out.println(Vermont.getLocation());
         Vermont.makeCoins();

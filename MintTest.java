@@ -15,7 +15,7 @@ public class MintTest {
     @BeforeEach
     public void init() {
         
-        mint = new USAMint("USA", "Captial_Mint");
+        mint = new USAMint("Capital_Mint");
     }
     
     @Test
