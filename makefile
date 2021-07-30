@@ -35,6 +35,18 @@ compile: Mint.java USAMint.java CanadaMint.java MintTest.java USAMintTest.java C
 	javac -cp .:$(JUNIT5_JAR) CanadaMintTest.java
 	javac -cp .:$(JUNIT5_JAR) MintTest.java
 	javac -cp .:$(JUNIT5_JAR) CoinTest.java
+	javac -cp .:$(JUNIT5_JAR) PennyTest.java
+	javac -cp .:$(JUNIT5_JAR) NickelTest.java
+	javac -cp .:$(JUNIT5_JAR) DimeTest.java
+	javac -cp .:$(JUNIT5_JAR) QuarterTest.java
+	javac -cp .:$(JUNIT5_JAR) HalfDollarTest.java
+	javac -cp .:$(JUNIT5_JAR) DollarTest.java
+	javac -cp .:$(JUNIT5_JAR) CadNickelTest.java
+	javac -cp .:$(JUNIT5_JAR) CadDimeTest.java
+	javac -cp .:$(JUNIT5_JAR) CadQuarterTest.java
+	javac -cp .:$(JUNIT5_JAR) FiftyCentTest.java
+	javac -cp .:$(JUNIT5_JAR) LoonieTest.java
+	javac -cp .:$(JUNIT5_JAR) ToonieTest.java
 	javac -cp .:$(JUNIT5_JAR) *.java
 	
 
