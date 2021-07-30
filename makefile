@@ -34,6 +34,7 @@ compile: Mint.java USAMint.java CanadaMint.java MintTest.java USAMintTest.java C
 	javac -cp .:$(JUNIT5_JAR) USAMintTest.java	
 	javac -cp .:$(JUNIT5_JAR) CanadaMintTest.java
 	javac -cp .:$(JUNIT5_JAR) MintTest.java
+	javac -cp .:$(JUNIT5_JAR) CoinTest.java
 	javac -cp .:$(JUNIT5_JAR) *.java
 	
 
