@@ -1,13 +1,21 @@
 import java.util.Scanner;
 public class USAMint extends Mint {
-    
+   
+    private static USAMint usMint; 
     private String location = "USA";
     private String name;
     private Scanner valScan = new Scanner(System.in);
 
-    public USAMint( String name) {
+    private USAMint( String name) {
         super("USA", name);
         this.name = name;
+    }
+
+    public static USAMint getInstance() {
+        if (usMint == null) {
+            usMint = new USAMint("Capitol_Mint");
+        }
+        return usMint;
     }
 
     public String getName() {

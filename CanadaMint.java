@@ -1,16 +1,24 @@
 
 import java.util.Scanner;
 public class CanadaMint extends Mint {
-    
+   
+    private static CanadaMint cadMint; 
     private String location = "CAD";
     private String name;
-    
     private Scanner valScan = new Scanner(System.in);
 
-    public CanadaMint(String name) {
+    private CanadaMint(String name) {
         super("CAD", name);
         this.name = name;
     }
+
+    public static CanadaMint getInstance() {
+    if (cadMint == null) {
+        cadMint = new CanadaMint("Canadian_Mint");
+        }
+    return cadMint;
+    }
+
 
     public String getName() {
         return name;

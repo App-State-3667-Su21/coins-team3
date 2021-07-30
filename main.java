@@ -9,10 +9,10 @@ public class main{
         Montreal.makeCoins();
         */
        
-        CanadaMint Vermont = new CanadaMint("American Mint");
-        System.out.println(Vermont.getName());
-        System.out.println(Vermont.getLocation());
-        Vermont.makeCoins();
+        
+        System.out.println(CanadaMint.getInstance().getName());
+        System.out.println(CanadaMint.getInstance().getLocation());
+        CanadaMint.getInstance().makeCoins();
         
         //Penny Orange = new Penny();
         //System.out.println(Orange.getClass().getName());
