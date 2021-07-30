@@ -7,17 +7,24 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import java.util.Random;
 
-class dummyMint extends Mint{getLocation{return;} getName{return;}}
+class dummyMint extends Mint{
+    public dummyMint(String loc, String nam)
+    {
+        super(loc, nam);
+    }
+    public String getLocation(){return location;}  
+    public String getName(){return name;}
+    public void makeCoins(){return;}}
 
 public class MintTest {
     
-    private Mint mint;
+    private dummyMint mint;
     
     
     @BeforeEach
     public void init() {
-        
-        mint = new USAMint("Capital_Mint");
+    mint = new dummyMint("USA", "Capital_Mint");    
+      
     }
     
     @Test
@@ -31,16 +38,5 @@ public class MintTest {
         String name = mint.getName();
         assertEquals("Capital_Mint", name);
     }
-
-    /*
-        I Dont know how to test makeCoins(), val is not a field, can't just pull it, 
-        I think we need to do a similar thing of setUpOut() that takes output and do the same
-        think with system.in. That's just my thinking on how to get access to the value, but then the test
-        itself is requiring to put in input for each value.
-
-    */
-    @Test
-    public void TestMakeCoins(){
-        
-    }
+  
 }

@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public abstract class Mint {
 
-    private String location;
-    private String name;
+    public String location;
+    public String name;
     private Scanner valScan = new Scanner(System.in);
     
     //Constructor
