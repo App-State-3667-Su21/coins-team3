@@ -1,9 +1,15 @@
 import java.util.Random;
 public abstract class Coin {
-    private String code;
-    private double val;
+    public String code;
+    public double val;
     public  boolean fail = false;
-    private Random rand = new Random();
+    public Random rand = new Random();
+
+    /**public Coin(String code, double val)
+    {
+        this.code = code;
+        this.val = val;
+    }*/
 
     public abstract String getCode();
 

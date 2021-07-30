@@ -2,28 +2,51 @@
  *  * JUnit5 test class
  *   */
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 import java.io.PrintStream;
 import java.io.ByteArrayOutputStream;
 
+class dummyCoin extends Coin{
+    private double val = .1;
+    private String code = "USD"; 
+    public String getCode(){return code;}  
+    public double getVal(){return val;}
+    } 
+
+
+
 public class CoinTest{
 
-    Coin coin;
-    PrintStream originalOut;
-    ByteArrayOutputStream baos;
-    PrintStream newOut;
+    static dummyCoin coin;
+    static PrintStream originalOut;
+    static ByteArrayOutputStream baos;
+    static PrintStream newOut;
 
     @BeforeEach
     public void init() {
-        
+        dummyCoin coin = new dummyCoin();
+
+        originalOut = System.out;
+
+        baos = new ByteArrayOutputStream();
+        newOut = new PrintStream(baos);
+        System.setOut(newOut);
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.setOut(originalOut);
     }
 
     @Test 
-    public void smelt_test(){
-        
+    public void smeltTest(){
+        String expectedOutput = "Smelting " + this.getClass().getName() + "...completed";
+        coin.smelt();
+        System.out.flush();
+        String actualOutput = baos.toString();
+        assertEquals(expectedOutput, actualOutput);
     }
 
     @Test
