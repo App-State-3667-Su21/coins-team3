@@ -19,18 +19,18 @@ public class CanadaMintTest {
     @BeforeEach
     public void init() {
         System.out.println("CADMintTest");
-        CADMint = new CanadaMint("Canada_Mint");
+        //CADMint = new CanadaMint("Canada_Mint");
     }
     @Test
     public void testCanadaMintLocation() {
-        String location = CADMint.getLocation();
+        String location = CanadaMint.getInstance().getLocation();
         assertEquals("CAD", location);
     }
     @Test
     public void testCanadaMintName() {
 
-        String name = CADMint.getName();
-        assertEquals("Canada_Mint", name);
+        String name = CanadaMint.getInstance().getName();
+        assertEquals("Canadian_Mint", name);
     } 
     
     @Test
@@ -49,6 +49,14 @@ public class CanadaMintTest {
 	    System.setOut(newOut);
     }
     
+    @Test
+    public void canadaMint_makeCoins() {
+        System.out.println("make Coins");
+        setUpOut();
+        //CanadaMint.getInstance().makeCoins();
+        //CanadaMint.getInstance().<Method> is now how you call methods.
 
+        System.setOut(originalOut);
+    }
     
 }

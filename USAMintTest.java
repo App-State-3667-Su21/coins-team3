@@ -19,25 +19,20 @@ public class USAMintTest {
     @BeforeEach
     public void init() {
         System.out.println("USMintTest");
-        usMint = new USAMint("Capital_Mint");
+        //usMint = new USAMint("Capital_Mint");
     }
     @Test
     public void testUSAMintLocation() {
-        String location = usMint.getLocation();
+        String location = USAMint.getInstance().getLocation();
         assertEquals("USA", location);
     }
     @Test
     public void testUSAMintName() {
 
-        String name = usMint.getName();
-        assertEquals("Capital_Mint", name);
+        String name = USAMint.getInstance().getName();
+        assertEquals("Capitol_Mint", name);
     } 
-    
-    @Test
-    public void TestMakeCoins(){
-        
-    }    
-     
+         
     void setUpOut(){
         System.out.println("Set Up Out?");
 	    originalOut = System.out;     // save to restore later
@@ -54,7 +49,8 @@ public class USAMintTest {
     public void usMint_makeCoins() {
         System.out.println("make Coins");
         setUpOut();
-        //usMint.makeCoins();
+        //USAMint.getInstance().makeCoins();
+        //USAMint.getInstance().<Method> is now how you call methods.
 
         System.setOut(originalOut);
     }
