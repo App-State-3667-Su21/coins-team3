@@ -4,6 +4,9 @@ public abstract class Coin {
     private double val;
     public  boolean fail = false;
     private Random rand = new Random();
+    private String name;
+
+    public String getName();
 
     public abstract String getCode();
 
