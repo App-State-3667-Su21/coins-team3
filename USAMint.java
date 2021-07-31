@@ -2,6 +2,7 @@ public class USAMint extends Mint {
     
     private String location;
     private String name;
+    private Scanner valScan = new Scanner(System.in);
 
     public USAMint(String location, String name) {
         super(location, name);
