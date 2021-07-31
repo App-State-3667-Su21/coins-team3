@@ -1,11 +1,6 @@
 public class Loonie extends Coin {
     private String code = "CAD";
     private double val = 1;
-    private String name = "Loonie";
-
-    public String getName() {
-        return this.name();   
-    }
 
     public String getCode() {
         return this.code;

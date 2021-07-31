@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CanadaMint extends Mint {
     
     private String location;

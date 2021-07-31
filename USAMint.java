@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class USAMint extends Mint {
     
     private String location;
@@ -67,4 +69,4 @@ public class USAMint extends Mint {
         }
     }
     
-}
+
