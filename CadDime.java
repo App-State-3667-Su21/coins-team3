@@ -1,7 +1,12 @@
 public class CadDime extends Coin {
     private String code = "CAD";
     private double val = 0.1;
+    private String name = "CadDime";
 
+    public String getName() {
+        return this.name();   
+    }
+    
     public String getCode() {
         return this.code;
     }
@@ -9,4 +14,5 @@ public class CadDime extends Coin {
     public double getVal() {
         return this.val;
     }
+   
 }
