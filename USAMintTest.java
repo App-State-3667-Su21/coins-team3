@@ -19,7 +19,7 @@ public class USAMintTest {
     @BeforeEach
     public void init() {
         System.out.println("USMintTest");
-        //usMint = new USAMint("Capital_Mint");
+        USAMint.getInstance();
     }
     @Test
     public void testUSAMintLocation() {
@@ -45,7 +45,7 @@ public class USAMintTest {
     }
     
 
-    @Test
+    /**@Test
     public void usMint_makeCoins() {
         System.out.println("make Coins");
         setUpOut();
@@ -53,5 +53,16 @@ public class USAMintTest {
         //USAMint.getInstance().<Method> is now how you call methods.
 
         System.setOut(originalOut);
+    }*/
+
+    @Test 
+    public void usMint_makeCoins(){
+        String expectedOutput = "Possible coin factories include: USD, GBP, CAD, EUR\n" +
+        "Using USD: Capitol_Mint\n\n" +
+        "Enter coin denomination (0.25 = a quarter, 0 to quit): ";
+        USAMint.getInstance().makeCoins();
+        System.out.flush();
+        String actualOutput = baos.toString();
+        assertEquals(expectedOutput, actualOutput);
     }
 }
