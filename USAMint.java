@@ -70,7 +70,8 @@ public class USAMint extends Mint {
                 }
                 else
                 {
-                System.out.println("Error: Invalid coin value. Try again.");
+                    NullCoin frank = new NullCoin();
+                    frank.mint();
                 }
             }
         }
