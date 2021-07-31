@@ -42,8 +42,9 @@ public class CoinTest{
 
     @Test 
     public void smeltTest(){
-        String expectedOutput = "Smelting " + this.getClass().getName() + "...completed";
-        coin.smelt();
+        dummyCoin coin2 = new dummyCoin();
+        String expectedOutput = "Smelting dummyCoin...completed.\n";
+        coin2.smelt();
         System.out.flush();
         String actualOutput = baos.toString();
         assertEquals(expectedOutput, actualOutput);
