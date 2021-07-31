@@ -1,7 +1,7 @@
 public class CadNickle extends Coin {
     private String code = "CAD";
     private double val = 0.05;
-    private String name = "CadDime";
+    private String name = "CadNickle";
 
     public String getName() {
         return this.name();   
