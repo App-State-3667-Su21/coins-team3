@@ -53,6 +53,7 @@ public class CanadaMintTest {
     public void canadaMint_makeCoins() {
         System.out.println("make Coins");
         setUpOut();
+        //Need to finish
         //CanadaMint.getInstance().makeCoins();
         //CanadaMint.getInstance().<Method> is now how you call methods.
 
