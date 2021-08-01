@@ -22,7 +22,7 @@ public abstract class Coin {
         System.out.print("Smelting " + n);
         
         Context context = new Context(n);
-        context.doOperation();
+        context.executeSmeltStrategy();
         
         System.out.println("...completed.");
     }

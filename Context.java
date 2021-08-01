@@ -2,6 +2,7 @@ public class Context{
     private SmeltStrategy strategy;
 
     public Context(String coinClass){
+        System.out.println();
         if(coinClass.equals("Penny")) strategy = new PennySmelt();
         else if(coinClass.equals("Nickel")) strategy = new NickelSmelt();
         else if(coinClass.equals("Dime")) strategy = new DimeSmelt();
