@@ -31,9 +31,9 @@ public abstract class Coin {
     public void imprinting(){
         
         String imprintName = this.getClass().getName(); //Here we grab the name of the coin.
-        System.out.println("Imprinting" + imprintName + " ");
+        System.out.print("Imprinting " + imprintName);
 
-        System.out.println("... completed"); //Print completed imprinting. 
+        System.out.println("...completed"); //Print completed imprinting. 
 
     }
 
