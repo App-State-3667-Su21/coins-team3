@@ -49,6 +49,7 @@ public class USAMintTest {
     public void usMint_makeCoins() {
         System.out.println("make Coins");
         setUpOut();
+	//Need to finish
         //USAMint.getInstance().makeCoins();
         //USAMint.getInstance().<Method> is now how you call methods.
 
