@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 import java.io.PrintStream;
 import java.io.ByteArrayOutputStream;
 
-public class PennySmeltTest {
+public class CadNickelSmeltTest {
 
     static dummyCoin coin;
     static PrintStream originalOut;
@@ -26,8 +26,8 @@ public class PennySmeltTest {
 
     @Test
     public void uniqueSmeltTest() {
-        PennySmelt p = new PennySmelt();
-        String expectedOutput = "(2.5% Cu, 97.5% Zi)";
+        CadNickelSmelt p = new CadNickelSmelt();
+        String expectedOutput = "(specs unknown)";
         p.doOperation();
         System.out.flush();
         String actualOutput = baos.toString();
