@@ -4,6 +4,7 @@ public abstract class Coin {
     public double val;
     public  boolean fail = false;
     public Random rand = new Random();
+    
 
     /**public Coin(String code, double val)
     {
@@ -17,7 +18,12 @@ public abstract class Coin {
     
     public void smelt()
     {
-        System.out.print("Smelting " + this.getClass().getName());
+        String n = this.getClass().getName();
+        System.out.print("Smelting " + n);
+        
+        Context context = new Context(n);
+        context.doOperation();
+        
         System.out.println("...completed.");
     }
 
