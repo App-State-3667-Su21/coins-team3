@@ -32,7 +32,7 @@ public class USAMint extends Mint {
             double val = 1;
             while(val != 0)
             {
-                System.out.print("Enter Coint denomination (0.25 = a quarter, 0 to quit): ");
+                System.out.print("Enter Coin denomination (0.25 = a quarter, 0 to quit): ");
                 val = valScan.nextDouble();
                 if(val == 0)
                 {

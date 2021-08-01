@@ -12,8 +12,8 @@ public class main{
         
         System.out.println(CanadaMint.getInstance().getName());
         System.out.println(CanadaMint.getInstance().getLocation());
-        CanadaMint.getInstance().makeCoins();
-        
+        USAMint.getInstance().makeCoins();
+        CanadaMint.getInstance().makeCoins(); 
         //Penny Orange = new Penny();
         //System.out.println(Orange.getClass().getName());
         

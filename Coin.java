@@ -19,7 +19,7 @@ public abstract class Coin {
     public void smelt()
     {
         String n = this.getClass().getName();
-        System.out.print("Smelting " + n);
+        System.out.print("Smelting " + n + " ");
         
         Context context = new Context(n);
         context.executeSmeltStrategy();
