@@ -54,6 +54,7 @@ public class USAMintTest {
     public void usMint_makeCoins() {
         System.out.println("make Coins");
         setUpOut();
+	    //Need to finish
         //usMint.makeCoins();
 
         System.setOut(originalOut);
