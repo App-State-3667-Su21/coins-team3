@@ -40,8 +40,18 @@ public class CoinTest{
     @Test 
     public void smeltTest(){
         dummyCoin coin = new dummyCoin();
-        String expectedOutput = "Smelting dummyCoin...completed.\n";
+        String expectedOutput = "Smelting dummyCoin (no specs)...completed.\n";
         coin.smelt();
+        System.out.flush();
+        String actualOutput = baos.toString();
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test 
+    public void imprintingTest(){
+        dummyCoin coin = new dummyCoin();
+        String expectedOutput = "Imprinting dummyCoin...completed.\n";
+        coin.imprinting();
         System.out.flush();
         String actualOutput = baos.toString();
         assertEquals(expectedOutput, actualOutput);
@@ -98,22 +108,26 @@ public class CoinTest{
     @Test
     public void mint_test(){
         dummyCoin coin = new dummyCoin();
-        String expectedOutput = "Smelting dummyCoin...completed.\n" +
+        String expectedOutput = "Smelting dummyCoin (no specs)...completed.\n" +
+                                "Imprinting dummyCoin...completed.\n" +
                                 "Inspecting dummyCoin...completed.\n" +
                                 "Smoothing dummyCoin...completed.\n" +
                                 "Polishing dummyCoin...completed.\n" +
                                 "(dummyCoin) $0.1\n";
 
-        String expectedOutput2 = "Smelting dummyCoin...completed.\n" +
+        String expectedOutput2 ="Smelting dummyCoin (no specs)...completed.\n" +
+                                "Imprinting dummyCoin...completed.\n" +
                                 "Inspecting dummyCoin...failed.\n" +
                                 "Failed to manufacture coin.\n";
         
-        String expectedOutput3 = "Smelting dummyCoin...completed.\n" +
+        String expectedOutput3 ="Smelting dummyCoin (no specs)...completed.\n" +
+                                "Imprinting dummyCoin...completed.\n" +
                                 "Inspecting dummyCoin...completed.\n" +
                                 "Smoothing dummyCoin...failed.\n" +
                                 "Failed to manufacture coin.\n";
         
-        String expectedOutput4 = "Smelting dummyCoin...completed.\n" +
+        String expectedOutput4 ="Smelting dummyCoin (no specs)...completed.\n" +
+                                "Imprinting dummyCoin...completed.\n" +
                                 "Inspecting dummyCoin...completed.\n" +
                                 "Smoothing dummyCoin...completed.\n" +
                                 "Polishing dummyCoin...failed.\n" +

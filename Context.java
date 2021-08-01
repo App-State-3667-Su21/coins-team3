@@ -15,6 +15,7 @@ public class Context{
         else if(coinClass.equals("FiftyCent")) strategy = new FiftyCentSmelt();
         else if(coinClass.equals("Loonie")) strategy = new LoonieSmelt();
         else if(coinClass.equals("Toonie")) strategy = new ToonieSmelt();
+        else if(coinClass.equals("dummyCoin")) strategy = new dummyCoinSmelt();
         else System.out.println("Context error");
     }
 
